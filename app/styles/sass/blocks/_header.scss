@@ -1,0 +1,36 @@
+.header{
+  &__top{
+    padding: 28px;
+  }
+  &__bottom{
+    background-color: #F9F9F9;
+    @include media-breakpoint-down(xl) {
+      box-shadow: 1px 0 5px rgb(0 0 0 / 50%);
+      height: 100%;
+      max-width: 296px;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      transform: translateX(-300px);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      transition: 1s;
+    }
+  }
+  &__close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border: 4px solid #e62f57;
+    border-radius: 50%;
+  }
+
+}
+.header__bottom.active{
+  transform: translateX(0px);
+  z-index: 999;
+  transition: 1s;
+}

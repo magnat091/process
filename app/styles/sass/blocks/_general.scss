@@ -1,0 +1,56 @@
+// GENERAL PROJECT STYLES
+a:active,
+a:hover,
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.position-relative {
+    position: relative;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    line-height: 14.63px;
+}
+
+.checkbox {
+    label{
+        display: flex;
+        align-items: center;
+        input {
+            display: none;
+        }
+        span {
+            height: 20px;
+            width: 20px;
+            border: 1px solid gray;
+            display: inline-block;
+            position: relative;
+            background-color:#FFF;
+            border-radius:2px;
+            padding:3px;
+            margin-right: 16px;
+        }
+        [type=checkbox]:checked + span:before {
+            content: '\2714';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            font-size:23px;
+            color:#000000;
+            @include media-breakpoint-down(md) {
+                font-size:17px;
+            }
+        }
+    }
+}
+
+.border{
+    border-bottom: 1px solid #E7E7E7;
+}

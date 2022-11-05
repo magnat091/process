@@ -1,0 +1,80 @@
+.nav{
+  position: relative;
+  &__list{
+    display: flex;
+    padding: 21px;
+    @include media-breakpoint-down(xl) {
+     flex-direction: column;
+    }
+  }
+  &__item{
+    list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+  }
+  &__item:not(:last-child){
+    margin-right: 65px;
+    @include media-breakpoint-down(xl) {
+      margin-right: 0px;
+      margin-bottom: 10px;
+    }
+
+  }
+  &__icon::after{
+    position: absolute;
+    left: 110%;
+    bottom: 25%;
+    height: 3px;
+    width: 14px;
+    background-color: #000000;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+  &__icon::before{
+    position: absolute;
+    left: 110%;
+    top: 25%;
+    height: 50%;
+    width: 3px;
+    background-color: #000000;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+  &__btn{
+    .btn{
+      font-size: 14px;
+      justify-content: center;
+    }
+  }
+
+  &__close:before,
+  &__close:after {
+    content: "";
+    background: #000000;
+    content: "";
+    height: 4px;
+    right: 10px;
+    position: absolute;
+    top: 0px;
+    width: 26px;
+  }
+
+  &__close:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &__close:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}

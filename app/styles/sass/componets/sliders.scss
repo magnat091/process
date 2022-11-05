@@ -1,0 +1,50 @@
+.slick-list{
+  padding: 25px 0 !important;
+}
+
+.slick-arrow{
+  border: 2px solid #e7e4e4 !important;
+  height: 50px!important;
+  width: 50px!important;
+  top: -20% !important;
+  color: #000000 !important;
+  @include media-breakpoint-down(xl) {
+    top: 103% !important;
+  }
+}
+
+.slick-next{
+  right: 0%!important;
+  &::before{
+    content: ">" !important;
+    color: black!important;
+    font-size: 30px!important;
+  }
+}
+
+
+.slick-prev{
+  left: 90% !important;
+  &::before{
+    content: "<" !important;
+    color: black!important;
+    font-size: 30px!important;
+  }
+  @include media-breakpoint-down(xl) {
+    left: 85% !important;
+  }
+  @include media-breakpoint-down(lg) {
+    left: 0%!important;
+  }
+}
+
+.slick-dots{
+  bottom: -20% !important;
+}
+.slick-dots li button:before {
+  font-size: 25px!important;
+}
+
+.slick-dots li.slick-active button:before{
+  color: $accent!important;
+}

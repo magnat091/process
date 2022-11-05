@@ -1,0 +1,481 @@
+<!--#set var="title" value="Web952" -->
+<!--#include virtual="/parts/header.html" -->
+
+<section class="delivery py--80" id="root">
+    <div class="container">
+        <div class="delivery__header">
+            <h1 class="h1 mb-5 fw--bold">Доставка топлива</h1>
+        </div>
+        <div class="delivery__content">
+            <h2 class="h2 mb-5">Быстрый<span class="text--accent"> заказ топлива</span></h2>
+            <div class="form form__delivery mb-4">
+                <div class="form__field">
+                    <span class="fw--bold p--3">Ваше имя</span>
+                    <input class="delivery__input" placeholder="Иван">
+                </div>
+                <div class="form__field">
+                    <span class="fw--bold p--3">Номер телефона</span>
+                    <input class="delivery__input" placeholder="+7 (___) ___-__-__">
+                </div>
+                <button class="btn btn__form">Заказать топливо</button>
+            </div>
+            <div class="delivery__checkbox checkbox">
+                <label>
+                    <input class="delivery__input" type='checkbox'>
+                    <span></span>
+                    <p class="p--3">Я согласен с условиями обработки данных</p>
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="basetable mb--100">
+    <div class="container">
+        <h2 class="h2 mb-5">Стоимость топлива</h2>
+        <table class="basetable__table">
+            <tr class="bk--blue">
+                <th class="first text--white fw--400" colspan="1">Сорт топлива</th>
+                <th class="first text--white fw--400" colspan="1">Экологический класс</th>
+                <th class="first text--white fw--400" colspan="1">Производитель</th>
+                <th class="first text--white fw--400" colspan="1">Наличный расчет</th>
+                <th class="first text--white fw--400" colspan="1">Безналичный расчет</th>
+            </tr>
+            <tr class="basetable__row"></tr>
+            <tr>
+                <td class="bk--accent va--top" rowspan="5"> <h3 class="h3 text--white fw--bold">ДТ</h3></td>
+                <td class = "va--top" rowspan="3">ЕВРО-5</td>
+                <td class="first">Газпромнефть</td>
+                <td class="first">45.43 р.</td>
+                <td class="first">44.43 р.</td>
+            </tr>
+            <tr>
+                <td class="first">Лукойл</td>
+                <td class="first">45.16 р.</td>
+                <td class="first">43.98 р.</td>
+            </tr>
+            <tr>
+                <td class="first">Роснефть</td>
+                <td class="first">42.34 р.</td>
+                <td class="first">41.64 р.</td>
+            </tr>
+            <tr>
+                <td class = "va--top" rowspan="2">ЕВРО-4</td>
+                <td class="first">Газпромнефть</td>
+                <td class="first">-</td>
+                <td class="first">-</td>
+            </tr>
+            <tr>
+                <td class="first">Лукойл</td>
+                <td class="first">41.16 р.</td>
+                <td class="first">40.67 р.</td>
+            </tr>
+            <tr class="basetable__row"></tr>
+            <tr>
+                <td class="bk--accent va--top" rowspan="8"><h3 class="h3 text--white fw--bold">АИ-95</h3></td>
+                <td class = "va--top" rowspan="3">ЕВРО-5</td>
+                <td class="first">Газпромнефть</td>
+                <td class="first">45.43 р.</td>
+                <td class="first">44.43 р.</td>
+            </tr>
+            <tr>
+                <td class="first">Роснефть</td>
+                <td class="first">42.34 р.</td>
+                <td class="first">41.64 р.</td>
+            </tr>
+            <tr>
+                <td class="first">Лукойл</td>
+                <td class="first">45.16 р.</td>
+                <td class="first">43.98 р.</td>
+            </tr>
+            <tr>
+                <td class = "va--top" rowspan="2">ЕВРО-4</td>
+                <td class="first">Лукойл</td>
+                <td class="first">41.16 р.</td>
+                <td class="first">40.67 р.</td>
+            </tr>
+            <tr>
+                <td class="first">Газпромнефть</td>
+                <td class="first">-</td>
+                <td class="first">-</td>
+            </tr>
+            <tr>
+                <td class = "va--top" rowspan="3">ЕВРО-3</td>
+                <td class="first">Роснефть</td>
+                <td class="first">42.34 р.</td>
+                <td class="first">41.64 р.</td>
+            </tr>
+            <tr>
+                <td class="first">Газпромнефть</td>
+                <td class="first">-</td>
+                <td class="first">-</td>
+            </tr>
+            <tr>
+                <td class="first">Лукойл</td>
+                <td class="first">41.16 р.</td>
+                <td class="first">40.67 р.</td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section class ="calculator py--80">
+    <div class="container">
+        <h2 class="h2 mb-5">
+            Топливо с доставкой
+        </h2>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="form form__calculator">
+                    <div class="form__field">
+                        <span class="fw--bold p--3">Вид топлива</span>
+                        <select class="calculator__input">
+                            <option>ДТ</option>
+                            <option>АИ-95</option>
+                        </select>
+                    </div>
+                    <div class="form__field form__input">
+                        <span class="fw--bold p--3">Объем топлива</span>
+                        <input class="form__amount calculator__input" value="">
+                        <input class="form__toddler" type="range" min="0" max="5000" step="10" value="1670">
+                    </div>
+                    <div class="form__field">
+                        <span class="fw--bold p--3">Место доставки</span>
+                        <input class="calculator__input" placeholder="Укажите место">
+                    </div>
+                    <div class="form__field">
+                        <span class="fw--bold p--3">Ваше имя</span>
+                        <input class="calculator__input" placeholder="Иван">
+                    </div>
+                    <div class="form__field">
+                        <span class="fw--bold p--3">Номер телефона</span>
+                        <input class="calculator__input" placeholder="+7 (___) ___-__-__">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="output">
+                    <div class="output__header">
+                        <h3 class="h3 border mb-0 pb-2">Итого:</h3>
+                    </div>
+                    <div class="output__field border">
+                        <div class="row">
+                            <div class="col-9">
+                                <p class="p--1">Стоимость топлива</p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-end">
+                                <p class="output__value"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="output__field border">
+                        <div class="row">
+                            <div class="col-9">
+                                <p class="p--1 mb-3">Цена за литр:</p>
+                                <p class="p--3">Цена и стоимость указаны ориентировочно.<br>
+                                    Точные цену и стоимость собщит наш менеджер при подтверждении заявки.
+                                </p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-end">
+                                <p class="output__price">45.50₽</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="output__field">
+                        <div class="row">
+                            <div class="col-9">
+                                <p class="p--1 mb-3">Выгода:</p>
+                                <p class="p--3">При цене на АЗС  49.59 ₽  за литр, цены актуальны на  23.11.2020 г. </p>
+                            </div>
+                            <div class="col-3 d-flex justify-content-end">
+                                <p class="output__total fw--bold"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn__output">Заказать топливо</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="basics py--80">
+    <div class="container">
+        <div>
+            <h2 class="h2 mb-5">Как мы работаем</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__basics">
+                    <div class="card__header">
+                        <div class="card__img">
+                            <img src="./images/dist/Group.svg" alt="">
+                        </div>
+                        <div class="card__group">
+                            <p class="mb-3">1-3 мин.</p>
+                            <div class="arrow-1">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h4 class="mb-4">Оформление заявки</h4>
+                        <p class="p--1">Заполните заявку на сайте, укажите удобное для вас место приезда заправщика, сорт и количество топлива, которое хотите купить</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__basics">
+                    <div class="card__header">
+                        <div class="card__img">
+                            <img src="./images/dist/phone.svg" alt="">
+                        </div>
+                        <div class="card__group">
+                            <p class="mb-3">1-3 мин.</p>
+                            <div class="arrow-1">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h4 class="mb-4">Подтверждение заявки менеджером</h4>
+                        <p class="p--1">Дождитесь звонка нашего менеджера для уточнения условий заказа</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__basics">
+                    <div class="card__header">
+                        <div class="card__img">
+                            <img src="./images/dist/gas.svg" alt="">
+                        </div>
+                        <div class="card__group">
+                            <p>30-90 мин.</p>
+
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h4 class="mb-4">Заправка вашего автомобиля</h4>
+                        <p class="p--1 mb-3">В назначенное время приедет заправщик и заправит автомобиль топливом.</p>
+                        <p class="p--4">Если у заказчика есть действующий договор на топливные карты, то при оплате можно провести транзакцию через терминал. Переносное устройство есть у каждого заправщика</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="fueledge py--80">
+    <div class="container">
+        <div>
+            <h2 class="h2 mb-5">Преимущества сервиса</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__fueledge">
+                    <div class="card__img">
+                        <img src="./images/dist/certificate.svg" alt="">
+                    </div>
+                    <div class="card__content">
+                        <p class="p--2 fw--bold mb-3">Качество топлива</p>
+                        <p class="p--3">Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__fueledge">
+                    <div class="card__img">
+                        <img src="./images/dist/clock.svg" alt="">
+                    </div>
+                    <div class="card__content">
+                        <p class="p--2 fw--bold mb-3">Бережем ваше время и нервы</p>
+                        <p class="p--3">Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__fueledge">
+                    <div class="card__img">
+                        <img src="./images/dist/ruble.svg" alt="">
+                    </div>
+                    <div class="card__content">
+                        <p class="p--2 fw--bold mb-3">Цена</p>
+                        <p class="p--3">Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__fueledge">
+                    <div class="card__img">
+                        <img src="./images/dist/place.svg" alt="">
+                    </div>
+                    <div class="card__content">
+                        <p class="p--2 fw--bold mb-3">Ваш комфорт—наша забота</p>
+                        <p class="p--3">Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__fueledge">
+                    <div class="card__img">
+                        <img src="./images/dist/shield.svg" alt="">
+                    </div>
+                    <div class="card__content">
+                        <p class="p--2 fw--bold mb-3">Безопасность процесса</p>
+                        <p class="p--3">Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="card card__fueledge">
+                    <div class="card__img">
+                        <img src="./images/dist/way.svg" alt="">
+                    </div>
+                    <div class="card__content">
+                        <p class="p--2 fw--bold mb-3">Несколько ТС в одном месте?</p>
+                        <p class="p--3">Aliquam rhoncus et massa adipiscing risus leo nec lacus, sagittis. Eu, purus ac nisi sit eget sed et, adipiscing felis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sertificate py--80">
+    <div class="container">
+        <div class="sertificate__header">
+            <h2 class="h2 mb-5">Сертификаты качества топлива</h2>
+        </div>
+        <div class="sertificate__content">
+            <div>
+                <div class="card card__sertificate">
+                    <img src="./images/dist/image1.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="card card__sertificate">
+                    <img src="./images/dist/image2.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="card card__sertificate">
+                    <img src="./images/dist/image3.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="card card__sertificate">
+                    <img src="./images/dist/image4.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="card card__sertificate">
+                    <img src="./images/dist/image4.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="partners py--80">
+    <div class="container">
+        <div class="partners__header">
+            <h2 class="h2 mb-5">Наши партнеры</h2>
+        </div>
+        <div class="partners__content">
+            <div>
+                <img src="./images/dist/LUK_OIL_Logo_kyr%201.svg" alt="">
+            </div>
+            <div>
+                <img src="./images/dist/gazprom.svg" alt="">
+            </div>
+            <div>
+                <img src="./images/dist/Rosneft_Logo%201.svg" alt="">
+            </div>
+            <div>
+                <img src="./images/dist/Tatneft-Logo%201.svg" alt="">
+            </div>
+            <div>
+                <img src="./images/dist/Tatneft-Logo%201.svg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews py--80">
+    <div class="container">
+        <div class="reviews__header">
+            <h2 class="h2 mb-5">Отзывы</h2>
+        </div>
+        <div class="reviews__content">
+            <div>
+                <div class="card card__reviews">
+                <div class="card__body">
+                    <p class="p--2 fw--bold mb-3">Гусев Вячеслав</p>
+                    <p class="p--3 mb-5">Индивидуальный предприниматель</p>
+                    <div class="reviews__message">
+                        <p class="p--1">Velit, lectus sit urna tincidunt augue. Cursus vulputate pellentesque faucibus euismod. Diam pharetra, non, ut integer dui feugiat porttitor at. Non, dignissim enim viverra fringilla sit. Etiam justo a dignissim sociis vitae, nisi, justo, feugiat.</p>
+                    </div>
+                    <a class="text--accent fw--bold" href="">Подробнее</a>
+                </div>
+            </div>
+            </div>
+            <div>
+                <div class="card card__reviews">
+                <div class="card__body">
+                    <p class="p--2 fw--bold mb-3">Зеленов Евгений</p>
+                    <p class="p--3 mb-5">Гененеральный директор<br> транспортной компании</p>
+                    <div class="reviews__message">
+                        <p class="p--1">Mi auctor sit habitasse sed mi cras ullamcorper massa sed. In augue fames sodales pretium, at scelerisque. Pulvinar a mattis pharetra mi, aliquet sem tristique lorem eleifend. Nisl, scelerisque ut libero, pellentesque. Tincidunt vestibulum volutpat lacus imperdiet morbi vulputate tristique facilisi.</p>
+                    </div>
+                    <a class="text--accent fw--bold" href="">Подробнее</a>
+                </div>
+            </div>
+            </div>
+            <div>
+                <div class="card card__reviews">
+                <div class="card__body">
+                    <p class="p--2 fw--bold mb-3">Зеленов Евгений</p>
+                    <p class="p--3 mb-5">Гененеральный директор<br> транспортной компании</p>
+                    <div class="reviews__message">
+                        <p class="p--1">Mi auctor sit habitasse sed mi cras ullamcorper massa sed. In augue fames sodales pretium, at scelerisque. Pulvinar a mattis pharetra mi, aliquet sem tristique lorem eleifend. Nisl, scelerisque ut libero, pellentesque. Tincidunt vestibulum volutpat lacus imperdiet morbi vulputate tristique facilisi.</p>
+                    </div>
+                    <a class="text--accent fw--bold" href="">Подробнее</a>
+                </div>
+            </div>
+            </div>
+            <div>
+                <div class="card card__reviews">
+                <div class="card__body">
+                    <p class="p--2 fw--bold mb-3">Зеленов Евгений</p>
+                    <p class="p--3 mb-5">Гененеральный директор<br> транспортной компании</p>
+                    <div class="reviews__message">
+                        <p class="p--1">Mi auctor sit habitasse sed mi cras ullamcorper massa sed. In augue fames sodales pretium, at scelerisque. Pulvinar a mattis pharetra mi, aliquet sem tristique lorem eleifend. Nisl, scelerisque ut libero, pellentesque. Tincidunt vestibulum volutpat lacus imperdiet morbi vulputate tristique facilisi.</p>
+                    </div>
+                    <a class="text--accent fw--bold" href="">Подробнее</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <button class="btn btn__reviews">Читать все отзывы</button>
+    </div>
+</section>
+<section class="call py--80">
+    <div class="container">
+        <div class="call__header">
+            <h1 class="h1 mb-5 fw--bold">Остались вопросы?</h1>
+            <p class="p--2 mb-5">Готовы ответить на любой Ваш вопрос. Оставьте номер телефона и мы<br> свяжемся с вами в ближайщее время.</p>
+        </div>
+        <div class="call__body">
+            <div class="form form__call mb-5">
+                <div class="form__field">
+                    <input class="input call__input delivery__input" placeholder="Ваше имя">
+                </div>
+                <div class="form__field ">
+                    <input class="input call__input delivery__input" placeholder="Номер телефона">
+                </div>
+                <button class="btn ">Перезвонить мне</button>
+            </div>
+            <div class="call__checkbox checkbox">
+                <p class="p--3">Нажимая на кнопку «Перезвонить мне» я соглашаюсь с <span>политикой конфиденциальности</span></p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<!--#include virtual="/parts/footer.html" -->

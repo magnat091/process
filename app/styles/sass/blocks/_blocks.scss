@@ -1,0 +1,174 @@
+.help-desk{
+  display: flex;
+  justify-content: end;
+  a{
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.delivery {
+  &__input{
+    margin-right: 14px;
+    padding: 13px;
+    @include media-breakpoint-down(lg) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__content{
+    padding: 50px 96px;
+    width: 100%;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    @include media-breakpoint-down(md) {
+      padding: 50px;
+    }
+  }
+}
+
+.basetable{
+  overflow-x: auto;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: transparent;
+  &__table{
+    width: 100%;
+  }
+  &__row{
+    height: 20px;
+    border-left-color: transparent!important;
+    border-right-color: transparent!important;
+  }
+  tbody, td, tfoot, th, thead, tr{
+    border: 1px solid #E7E7E7;
+    padding: 16px;
+  }
+  th{}
+  .first{
+    border: none;
+  }
+}
+
+.calculator{
+  background-color: #F9F9F9;
+  &__input{
+    margin-right: 14px;
+    padding: 13px;
+    @include media-breakpoint-down(lg) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+.output{
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  &__header{
+
+  }
+  &__field{
+    padding:10px 0;
+  }
+  &__price{
+    display: flex;
+  }
+  &__value{
+    display: flex;
+  }
+  &__total{
+    display: flex;
+  }
+}
+
+.arrow-1 {
+  cursor: pointer;
+  height: 25px;
+  position: relative;
+  width: 59px;
+}
+.arrow-1 div {
+  background-color: $accent;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+  display: block;
+  height: 4px;
+  left: 0;
+  position: relative;
+  top: 9px;
+  width: 70px;
+}
+.arrow-1 div::after {
+  background-color: $accent;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+  content: "";
+  height: 4px;
+  position: absolute;
+  right: -8px;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 20px;
+}
+.arrow-1 div::before {
+  background-color: $accent;
+  content: "";
+  height: 4px;
+  position: absolute;
+  right: -8px;
+  top: -5px;
+  transform: rotate(45deg);
+  width: 20px;
+}
+@keyframes arrow-1 {
+  0% {
+    left:0;
+  }
+  50% {
+    left:10px;
+  }
+  100% {
+    left:0;
+  }
+}
+
+.fueledge {
+  background-color: #F9F9F9;
+}
+.sertificate{
+  position: relative;
+}
+
+.partners{
+  position: relative;
+  &__content{
+    padding: 50px 0;
+    border-bottom: 1px solid #E7E7E7;
+  }
+}
+
+.reviews{
+  position: relative;
+  background-color: #F9F9F9;
+  &__message{
+    min-height: 180px;
+    @include media-breakpoint-down(sm) {
+      min-height: 250px;
+    }
+  }
+}
+
+.call{
+  background-color: $blue;
+  color: $white;
+  &__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
